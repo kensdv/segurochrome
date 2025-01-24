@@ -18,19 +18,18 @@ ICON_DEL="❌"
 
 # Function to display ASCII logo and social links
 display_ascii() {
-echo -e " ${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${RESET}"
-echo -e " ${MAGENTA}  _______  _______  _______  __   __  ______    _______  __    _  _______  ______   _______ ${RESET}"
-echo -e " ${MAGENTA} |       ||       ||       ||  | |  ||    _ |  |       ||  |  | ||       ||      | |       |${RESET}"
-echo -e " ${MAGENTA} |  _____||    ___||    ___||  | |  ||   | ||  |   _   ||   |_| ||   _   ||  _    ||    ___|${RESET}"
-echo -e " ${MAGENTA} | |_____ |   |___ |   | __ |  |_|  ||   |_||_ |  | |  ||       ||  | |  || | |   ||   |___ ${RESET}"
-echo -e " ${MAGENTA} |_____  ||    ___||   ||  ||       ||    __  ||  |_|  ||  _    ||  |_|  || |_|   ||    ___|${RESET}"
-echo -e " ${MAGENTA}  _____| ||   |___ |   |_| ||       ||   |  | ||       || | |   ||       ||       ||   |___ ${RESET}"
-echo -e " ${MAGENTA} |_______||_______||_______||_______||___|  |_||_______||_|  |__||_______||______| |_______|${RESET}"
-echo -e " ${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${RESET}"
-echo -e " ${MAGENTA}🚀 Join Seguro Node on Telegram: https://t.me/seguronode ${RESET}"
-echo -e " ${MAGENTA}📢 Join Seguro Node on Discord: https://discord.gg ${RESET}"
+    echo -e " ${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${RESET}"
+    echo -e " ${MAGENTA}  _______  _______  _______  __   __  ______    _______  __    _  _______  ______   _______ ${RESET}"
+    echo -e " ${MAGENTA} |       ||       ||       ||  | |  ||    _ |  |       ||  |  | ||       ||      | |       |${RESET}"
+    echo -e " ${MAGENTA} |  _____||    ___||    ___||  | |  ||   | ||  |   _   ||   |_| ||   _   ||  _    ||    ___|${RESET}"
+    echo -e " ${MAGENTA} | |_____ |   |___ |   | __ |  |_|  ||   |_||_ |  | |  ||       ||  | |  || | |   ||   |___ ${RESET}"
+    echo -e " ${MAGENTA} |_____  ||    ___||   ||  ||       ||    __  ||  |_|  ||  _    ||  |_|  || |_|   ||    ___|${RESET}"
+    echo -e " ${MAGENTA}  _____| ||   |___ |   |_| ||       ||   |  | ||       || | |   ||       ||       ||   |___ ${RESET}"
+    echo -e " ${MAGENTA} |_______||_______||_______||_______||___|  |_||_______||_|  |__||_______||______| |_______|${RESET}"
+    echo -e " ${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${RESET}"
+    echo -e " ${MAGENTA}🚀 Join Seguro Node on Telegram: https://t.me/seguronode ${RESET}"
+    echo -e " ${MAGENTA}📢 Join Seguro Node on Discord: https://discord.gg ${RESET}"
 }
-
 
 # Check and install Docker and Docker Compose
 install_docker() {
@@ -63,7 +62,7 @@ install_browser() {
     echo -e "${GREEN}Starting Docker container for the browser...${RESET}"
     docker run -d --name=Seguro_browser \
         -p ${PORT}:3000 \
-        -e TITLE=DePinProject \
+        -e TITLE=SeguroNode \
         -e DISPLAY=:1 \
         -e PUID=1000 \
         -e PGID=1000 \
@@ -79,9 +78,9 @@ install_browser() {
 }
 
 # Restart the Docker container
-restart_browser(){
+restart_browser() {
     echo -e "${YELLOW}Restarting browser...${RESET}"
-    docker restart Nodezilla101_browser
+    docker restart Seguro_browser
     echo -e "${GREEN}✅ Browser restarted.${RESET}"
     read -p "Press enter to continue..."
 }
